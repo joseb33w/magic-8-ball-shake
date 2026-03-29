@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Magic 8 Ball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="info-panel">
+      <div class="eyebrow">Tap to shake</div>
+      <h1>Magic 8 Ball</h1>
+      <p class="hero-copy">Ask a yes-or-no question, tap the ball, and watch your answer appear with a smooth fade-in reveal.</p>
+
+      <label class="question-label" for="questionInput">Your question</label>
+      <div class="question-row">
+        <input id="questionInput" class="question-input" type="text" maxlength="120" placeholder="Will today be lucky?" />
+        <button id="askBtn" class="primary-btn">Shake</button>
+      </div>
+
+      <div class="status-card">
+        <div class="status-label">Latest answer</div>
+        <div id="answerText" class="answer-text">Tap the ball to reveal your fate</div>
+        <div id="statusText" class="status-text">Waiting for a question</div>
+      </div>
+    </section>
+
+    <section class="stage-panel">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <button id="ballButton" class="ball-button" aria-label="Shake the magic 8 ball">
+        <div id="magicBall" class="magic-ball">
+          <div class="ball-highlight"></div>
+          <div class="ball-shadow"></div>
+          <div class="window-ring">
+            <div class="window-core">
+              <div id="answerBubble" class="answer-bubble hidden">
+                <span id="bubbleText">8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </button>
+      <p class="tap-hint">Tap the ball or press Shake</p>
+    </section>
+  </main>
+
+  <script src="./app.js" crossorigin="anonymous"></script>
+</body>
+</html>
